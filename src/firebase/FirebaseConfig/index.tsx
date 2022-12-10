@@ -13,15 +13,9 @@ const firebaseConfig = {
     measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 }
 
-const app = 'app'; // remove this line
-export const auth = 'auth'; // remove this line
-export const db = 'db'; // remove this line
-export const storage = 'storage'; // remove this line
-
-// ! Uncomment the lines below to initialize firebase
-// const app = initializeApp(firebaseConfig);
-// export const db = getFirestore();
-// export const auth = getAuth();
-// export const storage = getStorage();
+const app = initializeApp(firebaseConfig);
+export const db = getFirestore();
+export const auth = getAuth();
+export const storage = getStorage();
 
 export default app;
